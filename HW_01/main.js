@@ -61,8 +61,9 @@ if (isNaN(getNumber) || !isBiggerthan1) {
 const getData = prompt('Введіть число більше або дорівнює 4:');
 const getNumber = +getData;
 const isMinimalNumber = getNumber >= 4; //for minimal piramide
+let pyramidString = '';
 
-if (isNaN(getNumber) || isMinimalNumber) {
+if (isNaN(getNumber) || !isMinimalNumber) {
     console.log('Pyramid can not be created');
 } else {
     let starsUsed = 0;
@@ -76,8 +77,9 @@ if (isNaN(getNumber) || isMinimalNumber) {
     for (let j = 1; j <= rows; j++) {
         let spaces = ' '.repeat(rows - j);
         let stars = '*'.repeat(2 * j - 1);
-        console.log(spaces + stars);
+        pyramidString += spaces + stars + '\n';
     }
+    console.log(pyramidString)
 }
 
 
