@@ -62,7 +62,7 @@ const getData = prompt('Введіть число більше або дорів
 const getNumber = +getData;
 const isMinimalNumber = getNumber >= 4; //for minimal piramide
 
-if (isNaN(getNumber) || isMinimalNumber) {
+if (isNaN(getNumber) || !isMinimalNumber) {
     console.log('Pyramid can not be created');
 } else {
     let starsUsed = 0;
