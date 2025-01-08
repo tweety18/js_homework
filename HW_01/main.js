@@ -18,9 +18,60 @@ function isPalindrome(str) {
     for (let i = str.length - 1; i >= 0; i--) {
         reverseStr += str[i];
     }
-    return reverseStr === str ? `${str} is palindrome`: ` ${str} is not palindrome`;
+    return reverseStr === str ? `${str} is palindrome` : ` ${str} is not palindrome`;
 }
 
 console.log(isPalindrome('test'));
-console.log(isPalindrome('шалаш'))
+console.log(isPalindrome('шалаш'));
+
+// 3
+// Найбі́льший спі́льний дільни́к (НСД) двох або більше невід'ємних чисел — найбільше натуральне число,
+// на яке ці числа діляться без остачі.
+
+
+function fingGCD(a, b) {
+    let number1Array = [];
+    let number2Array = [];
+    let gcd;
+
+    if (a > 0 && b > 0) {
+        // fing array of divisors for first argument
+        for (let i = 1; i <= a; i++) {
+            if (a % i === 0) {
+                number1Array.push(i);
+            }
+        }
+
+        // fing array of divisors for second argument
+        for (let i = 1; i <= b; i++) {
+            if (b % i === 0) {
+                number2Array.push(i);
+            }
+        }
+
+        //compare 2 arrays of divisors in nested loop
+        for (let i = number2Array.length - 1; i >= 0; i--) {
+            for (let k = number1Array.length - 1; k >= 0; k--) {
+                if (number1Array[k] === number2Array[i]) {
+                    gcd = number2Array[i];
+                }
+            }
+            if (gcd) {
+                break
+            }
+            ;
+        }
+
+        console.log(number1Array);
+        console.log(number2Array);
+        return gcd;
+    } else {
+        throw new Error('Please pass positive numbers');
+    }
+
+}
+
+console.log(fingGCD(24, 114));
+console.log(fingGCD(12, 12));
+console.log(fingGCD(0, 1)); //error
 
