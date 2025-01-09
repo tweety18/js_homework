@@ -29,7 +29,7 @@ console.log(isPalindrome('шалаш'));
 // на яке ці числа діляться без остачі.
 
 
-function fingGCD(a, b) {
+function findGCD(a, b) {
     let number1Array = [];
     let number2Array = [];
     let gcd;
@@ -71,7 +71,7 @@ function fingGCD(a, b) {
 
 }
 
-console.log(fingGCD(24, 114));
-console.log(fingGCD(12, 12));
-console.log(fingGCD(0, 1)); //error
+console.log(findGCD(24, 114));
+console.log(findGCD(12, 12));
+console.log(findGCD(0, 1)); //error
 
