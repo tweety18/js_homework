@@ -46,7 +46,7 @@ console.log(moveElementsByOne([1, 2, 3]));
 // [3, 1, 2] - move to the right by 1 element
 // [2, 1, 3] - reverse
 
-// [2, 3, 1] - move to the right by 1 element from prev ineration
+// [2, 3, 1] - move to the right by 1 element from prev iteration
 // [1, 3, 2] - reverse
 
 
