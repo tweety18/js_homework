@@ -1,7 +1,8 @@
 // 1
 function randomDelayPrint(message) {
     for (let i = 0; i < message.length; i++) {
-        setTimeout(() => console.log(message[i]), Math.floor(Math.random() * 1001));
+        const random = Math.floor(Math.random() * 1001);
+        setTimeout(() => console.log(message[i]), random);
     }
 }
 
